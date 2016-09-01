@@ -14,6 +14,8 @@
 		F352E48F1D78C98300B95488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F352E48D1D78C98300B95488 /* LaunchScreen.storyboard */; };
 		F352E49A1D78C98300B95488 /* TP7PtojetoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352E4991D78C98300B95488 /* TP7PtojetoTests.swift */; };
 		F352E4A51D78C98300B95488 /* TP7PtojetoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F352E4A41D78C98300B95488 /* TP7PtojetoUITests.swift */; };
+		F352E4B31D78C99400B95488 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F352E4B21D78C99400B95488 /* MapKit.framework */; };
+		F352E4B51D78C99F00B95488 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F352E4B41D78C99F00B95488 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F352E4A01D78C98300B95488 /* TP7PtojetoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TP7PtojetoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F352E4A41D78C98300B95488 /* TP7PtojetoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TP7PtojetoUITests.swift; sourceTree = "<group>"; };
 		F352E4A61D78C98300B95488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F352E4B21D78C99400B95488 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F352E4B41D78C99F00B95488 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F352E4B51D78C99F00B95488 /* CoreLocation.framework in Frameworks */,
+				F352E4B31D78C99400B95488 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,8 @@
 		F352E4781D78C98300B95488 = {
 			isa = PBXGroup;
 			children = (
+				F352E4B41D78C99F00B95488 /* CoreLocation.framework */,
+				F352E4B21D78C99400B95488 /* MapKit.framework */,
 				F352E4831D78C98300B95488 /* TP7Ptojeto */,
 				F352E4981D78C98300B95488 /* TP7PtojetoTests */,
 				F352E4A31D78C98300B95488 /* TP7PtojetoUITests */,

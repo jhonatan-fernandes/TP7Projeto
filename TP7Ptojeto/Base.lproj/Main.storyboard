@@ -1,25 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TP7Ptojeto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-um-VnW">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IQP-GC-xZ1">
+                                <rect key="frame" x="96" y="619" width="182" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="W1R-4C-1gu"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Satélite"/>
+                                    <segment title="Híbrido"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mudaRegiao:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Ca-16-abl"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpo-xf-qmR">
+                                <rect key="frame" x="20" y="28" width="92" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="FPE-T1-gfz"/>
+                                    <constraint firstAttribute="width" constant="92" id="KEB-bH-6TM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Centro"/>
+                                <connections>
+                                    <action selector="regiaoCentro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a6-M2-lm5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arg-SO-Mbr">
+                                <rect key="frame" x="257" y="28" width="98" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="RpV-Rs-Oea"/>
+                                    <constraint firstAttribute="width" constant="98" id="fwN-yO-JI8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Ipanema"/>
+                                <connections>
+                                    <action selector="regiaoIpanema:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yc4-hR-TEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xpo-xf-qmR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2TF-Ey-Ces"/>
+                            <constraint firstItem="IQP-GC-xZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Xu-2J-BN1"/>
+                            <constraint firstItem="cuE-um-VnW" firstAttribute="top" secondItem="xpo-xf-qmR" secondAttribute="bottom" constant="8" id="7bD-qm-b3R"/>
+                            <constraint firstItem="arg-SO-Mbr" firstAttribute="leading" secondItem="xpo-xf-qmR" secondAttribute="trailing" constant="145" id="88x-hq-nwr"/>
+                            <constraint firstItem="xpo-xf-qmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8NE-rj-KUw"/>
+                            <constraint firstItem="arg-SO-Mbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="IEo-Iu-OeT"/>
+                            <constraint firstItem="arg-SO-Mbr" firstAttribute="leading" secondItem="xpo-xf-qmR" secondAttribute="trailing" constant="145" id="Jkg-L6-ZMe"/>
+                            <constraint firstAttribute="trailing" secondItem="cuE-um-VnW" secondAttribute="trailing" id="SVh-Pg-XZm"/>
+                            <constraint firstItem="cuE-um-VnW" firstAttribute="top" secondItem="arg-SO-Mbr" secondAttribute="bottom" constant="8" id="W4H-Tw-0rl"/>
+                            <constraint firstAttribute="trailing" secondItem="arg-SO-Mbr" secondAttribute="trailing" constant="20" id="Ywr-i3-CWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cuE-um-VnW" secondAttribute="bottom" id="bKK-cf-Y7y"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQP-GC-xZ1" secondAttribute="bottom" constant="20" id="gSL-fi-4D0"/>
+                            <constraint firstItem="cuE-um-VnW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="qHk-bq-njm"/>
+                            <constraint firstItem="cuE-um-VnW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zvy-2O-Ejw"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="cuE-um-VnW" id="CRa-8B-Zxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="447.5" y="426.5"/>
         </scene>
     </scenes>
 </document>
